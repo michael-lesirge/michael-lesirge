@@ -2,8 +2,6 @@
 
 <h1>Hello!</h1>
 
-<p>My name is Michael and I am a student intrested in programming. I am pretty new and only know <b>python</b> and am starting to learn the basics of HTML, CSS, and some JavaScript.</p>
-<p>I just recently started using github so I put all my current little projects in all at the same date</p>
 
 
 

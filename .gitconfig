@@ -1,5 +1,5 @@
 [core]
-	excludesfile = C:\\Users\\Michael Lesirge\\.gitignore
+	excludesfile = ~/.gitignore
 [user]
 	email = michaellesirge@gmail.com
 	name = Michael Lesirge
@@ -7,4 +7,9 @@
 	ui = true
 [alias]
 	# custom log info at https://git-scm.com/docs/pretty-formats#Documentation/pretty-formats.txt-emaLem
-	log-graph = log --graph --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)\n' --all
+	# https://devhints.io/git-log-format
+	log-graph = log-graph-specific --all
+	log-graph-specific = log --graph --decorate --full-history --format=format:'%C(bold blue)%h%C(reset) - %C(cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)\n          %C(normal)%s%C(reset) - %C(black)%an%C(reset)\n'
+
+	log-graph-full-specific = log --graph --decorate --full-history --format=format:'%C(yellow)commit %H%C(reset)%C(auto)%d%C(reset)\n%C(bold)Author: %C(reset)%aN %C(black)<%aE>%C(reset) %C(cyan)%ad%C(reset) %C(green)(%ar)%C(reset)\n%C(bold)Commit%C(reset): %cN %C(black)<%cE>%C(reset) %C(cyan)%cd%C(reset) %C(green)(%cr)%C(reset)\n\n%s\n%b'
+	log-graph-full = log-graph-full-specific --all
